@@ -85,7 +85,7 @@ const innerStyle = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F2C94C",
+    backgroundColor: "#EC5E2A",
     borderRadius: "50%",
     width: 24,
     height: 24,

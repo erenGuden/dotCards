@@ -27,9 +27,10 @@ const Summary: FC<Props> = (props: Props) => {
           <h3
             style={{
               color: "black",
-              fontSize: "24px",
+              fontSize: "36px",
               fontWeight: 700,
               marginBottom: "22px",
+              fontFamily: "DM Sans",
             }}
           >
             Summary
@@ -68,7 +69,7 @@ const Summary: FC<Props> = (props: Props) => {
           <span style={{ marginLeft: "36px", fontSize: 22, fontWeight: 700 }}>
             Total
           </span>
-          <span style={{ fontSize: 22, fontWeight: 700 }}>
+          <span style={{ fontSize: "18px", paddingRight: "45px" }}>
             ${(total + 20 + 20 - 5).toFixed(2)}
           </span>
         </div>

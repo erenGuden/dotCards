@@ -102,12 +102,20 @@ const ProductPage: FC<Props> = (props: Props) => {
               Description
             </h3>
           </div>
-          <p style={{ marginTop: "18px" }}>{product.description}</p>
+          <p style={{ marginTop: "18px", marginBottom: "18px" }}>
+            {product.description}
+          </p>
+
+          {product?.features &&
+            product?.features?.length > 0 &&
+            product?.features?.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
         </div>
         <Image
-          src={product.cover}
           alt="description"
           className={styles.productTopImage}
+          src={product.imageDetail}
           width={528}
           height={373}
         />

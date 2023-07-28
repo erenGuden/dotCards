@@ -2,9 +2,11 @@ export interface IProduct extends IProductQuantity {
   id: string;
   cover: string;
   images: string[];
+  imageDetail: string;
   name: string;
   price: number;
   subtitle: string;
+  features: string[];
   priceSale: number;
   status: string;
   description: string;

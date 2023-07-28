@@ -44,9 +44,18 @@ const CartItems: FC<Props> = (props: Props) => {
           <div className={styles.itemDetails}>
             <div className={styles.itemTopDetails}>
               <div className={styles.itemTopLeftDetails}>
-                <span>{product?.name}</span>
-                <span style={{ color: "darkgray", paddingTop: 6 }}>
-                  {product?.description}
+                <span style={{ fontWeight: 700, fontSize: "20px" }}>
+                  {product?.name}
+                </span>
+                <span
+                  style={{
+                    color: "darkgray",
+                    paddingTop: 6,
+                    whiteSpace: "nowrap",
+                    fontSize: "18px",
+                  }}
+                >
+                  {product?.subtitle}
                 </span>
               </div>
               <div className={styles.itemTopRightDetails}>
@@ -55,7 +64,7 @@ const CartItems: FC<Props> = (props: Props) => {
             </div>
             <div
               className={styles.itemBottomDetails}
-              style={{ paddingTop: "7%", paddingLeft: 32 }}
+              style={{ paddingTop: "7%", paddingLeft: 2 }}
             >
               <QuantityButton
                 quantity={product?.quantity}
