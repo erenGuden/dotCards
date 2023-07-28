@@ -19,12 +19,12 @@ const QuantityButton: FC<Props> = (props: Props) => {
           <Image
             src={images.minus}
             alt="minus"
-            onClick={handleAmountIncrement}
+            onClick={handleAmountDecrement}
           />
         </button>
         <p>{quantity}</p>
         <button style={innerStyle.button}>
-          <Image src={images.plus} alt="plus" onClick={handleAmountDecrement} />
+          <Image src={images.plus} alt="plus" onClick={handleAmountIncrement} />
         </button>
       </div>
     </main>

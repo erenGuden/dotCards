@@ -3,13 +3,12 @@
 import React, { FC, use, useEffect, useState } from "react";
 import styles from "../../../app/page.module.css";
 import Image from "next/image";
-import Banner from "../../../assets/images/Banner.svg";
 import QuantityButton from "@/components/quantityButton";
 import AddToCart from "@/components/addToCartButton";
 import { productList } from "@/utils/data";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { IProduct } from "@/models/dto/product.dto";
-import { addBasket, setCartTotal } from "@/utils/redux/commonSlice";
+import { addBasket } from "@/utils/redux/commonSlice";
 import CarouselComponent from "@/components/carousel";
 
 interface Props {
@@ -51,7 +50,8 @@ const ProductPage: FC<Props> = (props: Props) => {
   };
 
   const handleAmountDecrement = () => {
-    setProduct({ ...product, quantity: product.quantity + 1 });
+    if (product.quantity > 1)
+      setProduct({ ...product, quantity: product.quantity - 1 });
   };
 
   return (
