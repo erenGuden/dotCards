@@ -17,7 +17,7 @@ export default function Page() {
 
   const handleAmountIncrement = (item: IProduct) => {
     let tempList = [...cartList];
-    let findIndex = tempList.findIndex((item) => item.id === item.id);
+    let findIndex = tempList.findIndex((i) => i.id === item.id);
     if (findIndex !== -1) {
       let temp = { ...tempList[findIndex] };
       temp.quantity = temp.quantity + 1;
@@ -29,11 +29,21 @@ export default function Page() {
 
   const handleAmountDecrement = (item: IProduct) => {
     let tempList = [...cartList];
-    let findIndex = tempList.findIndex((item) => item.id === item.id);
+    let findIndex = tempList.findIndex((i) => i.id === item.id);
     if (findIndex !== -1) {
       let temp = { ...tempList[findIndex] };
       temp.quantity = temp.quantity - 1;
       tempList[findIndex] = temp;
+      dispatch(addBasket(tempList));
+      return;
+    }
+  };
+
+  const handleRemove = (item: IProduct) => {
+    let tempList = [...cartList];
+    let findIndex = tempList.findIndex((i) => i.id === item.id);
+    if (findIndex !== -1) {
+      tempList.splice(findIndex, 1);
       dispatch(addBasket(tempList));
       return;
     }
@@ -70,8 +80,13 @@ export default function Page() {
               <CartItems
                 key={item.id}
                 product={item}
-                handleAmountIncrement={() => handleAmountIncrement(item)}
-                handleAmountDecrement={() => handleAmountDecrement(item)}
+                handleAmountIncrement={(product: IProduct) =>
+                  handleAmountIncrement(product)
+                }
+                handleAmountDecrement={(product: IProduct) =>
+                  handleAmountDecrement(product)
+                }
+                handleRemove={(product: IProduct) => handleRemove(product)}
               />
             ))}
           </div>

@@ -14,8 +14,7 @@ const QuantityButton: FC<Props> = (props: Props) => {
   const { quantity, handleAmountIncrement, handleAmountDecrement } = props;
   return (
     <main>
-      {/* Top left: Product Image */}
-      <div style={innerStyle.productImage}>
+      <div style={innerStyle.quantityContainer}>
         <button style={innerStyle.button}>
           <Image
             src={images.minus}
@@ -33,7 +32,7 @@ const QuantityButton: FC<Props> = (props: Props) => {
 };
 
 const innerStyle = {
-  productImage: {
+  quantityContainer: {
     display: "inline-flex",
     width: "136px",
     height: "48px",

@@ -11,11 +11,17 @@ interface Props {
 
   handleAmountIncrement: (product: IProduct) => void;
   handleAmountDecrement: (product: IProduct) => void;
+  handleRemove: (product: IProduct) => void;
 }
 
 const CartItems: FC<Props> = (props: Props) => {
-  const { product, lastItem, handleAmountIncrement, handleAmountDecrement } =
-    props;
+  const {
+    product,
+    lastItem,
+    handleAmountIncrement,
+    handleAmountDecrement,
+    handleRemove,
+  } = props;
   return (
     <main
       style={{
@@ -75,7 +81,11 @@ const CartItems: FC<Props> = (props: Props) => {
                   handleAmountIncrement(product);
                 }}
               />
-              <Remove />
+              <Remove
+                handleRemove={() => {
+                  handleRemove(product);
+                }}
+              />
             </div>
           </div>
         </div>

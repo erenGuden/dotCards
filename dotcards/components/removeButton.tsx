@@ -1,12 +1,17 @@
 "use client";
 import React, { FC } from "react";
 
-interface Props {}
+interface Props {
+  handleRemove: () => void;
+}
 
 const Remove: FC<Props> = (props: Props) => {
+  const { handleRemove } = props;
   return (
     <main>
-      <button style={innerStyle.button}>Remove</button>
+      <button style={innerStyle.button} onClick={handleRemove}>
+        Remove
+      </button>
     </main>
   );
 };
