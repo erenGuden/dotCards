@@ -75,10 +75,10 @@ const CartItems: FC<Props> = (props: Props) => {
               <QuantityButton
                 quantity={product?.quantity}
                 handleAmountIncrement={() => {
-                  handleAmountDecrement(product);
+                  handleAmountIncrement(product);
                 }}
                 handleAmountDecrement={() => {
-                  handleAmountIncrement(product);
+                  if (product.quantity > 1) handleAmountDecrement(product);
                 }}
               />
               <Remove
