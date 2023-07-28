@@ -27,10 +27,11 @@ const Summary: FC<Props> = (props: Props) => {
           <h3
             style={{
               color: "black",
-              fontSize: "36px",
+              fontSize: "35px",
               fontWeight: 700,
               marginBottom: "22px",
               fontFamily: "DM Sans",
+              marginLeft: "10px",
             }}
           >
             Summary
@@ -41,9 +42,11 @@ const Summary: FC<Props> = (props: Props) => {
           </div>
           <div>
             <span className={styles.summarySpan}>Shipping and delivery</span>
+            {/* Hardcoded */}
             <span className={styles.summarySpan}>$20.00</span>
           </div>
           <div>
+            {/* Hardcoded */}
             <span className={styles.summarySpan}>Tax</span>
             <span className={styles.summarySpan}>$20.00</span>
           </div>

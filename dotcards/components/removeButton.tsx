@@ -1,26 +1,28 @@
-// pages/Page.tsx
+"use client";
+import React, { FC } from "react";
 
-import React from "react";
-import styles from ".././app/page.module.css";
+interface Props {}
 
-export default function Remove() {
+const Remove: FC<Props> = (props: Props) => {
   return (
     <main>
-      <button
-        style={{
-          backgroundColor: "transparent",
-          textDecorationLine: "underline",
-          color: "#67696E",
-          fontSize: "16px",
-          border: "none",
-          marginLeft: 30,
-          fontWeight: 700,
-          paddingTop: 14,
-          lineHeight: "24px",
-        }}
-      >
-        Remove
-      </button>
+      <button style={innerStyle.button}>Remove</button>
     </main>
   );
-}
+};
+
+const innerStyle = {
+  button: {
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    color: "#67696E",
+    fontSize: "16px",
+    border: "none",
+    marginLeft: 30,
+    fontWeight: 700,
+    paddingTop: 14,
+    lineHeight: "24px",
+  },
+};
+
+export default Remove;

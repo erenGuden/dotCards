@@ -64,14 +64,17 @@ const ProductPage: FC<Props> = (props: Props) => {
         )}
         <div className={styles.headerContainer}>
           <div className={styles.headerContainerTop}>
-            {/* Title */}
+            {/* Product Name */}
             <h2 style={{ fontFamily: "DM Sans" }}>{product?.name}</h2>
-            {/* Description */}
-            <p style={{ fontFamily: "Inter" }}>{product?.description}</p>
+            {/* Subtitle */}
+            <p style={{ fontFamily: "Inter", fontSize: "20px" }}>
+              {product?.subtitle}
+            </p>
             {/* Price */}
             <span>${product?.priceSale}</span>
           </div>
           <div className={styles.headerContainerBottom} style={{ border: 0 }}>
+            {/* Quantity Button */}
             <h3 style={innerStyle.quantity}>Quantity</h3>
             <QuantityButton
               quantity={product.quantity}
@@ -112,6 +115,7 @@ const ProductPage: FC<Props> = (props: Props) => {
               return <li key={index}>{item}</li>;
             })}
         </div>
+        {/* Product Image */}
         <Image
           alt="description"
           className={styles.productTopImage}
@@ -119,12 +123,12 @@ const ProductPage: FC<Props> = (props: Props) => {
           width={528}
           height={373}
         />
-        {/* Top left: Product Image */}
       </div>
     </main>
   );
 };
 
+// Inner Styling
 const innerStyle = {
   quantity: {
     fontWeight: 700,

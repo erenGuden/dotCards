@@ -16,51 +16,33 @@ const Header: FC<Props> = (props: Props) => {
     <div className={styles.header}>
       {/* left  */}
       <Link href={{ pathname: "/" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <Image src={logo} width={24} height={24} alt="Sun Co. Logo" />
-          <p
-            style={{
-              color: "black",
-              marginLeft: 9,
-              textAlign: "right",
-              fontFamily: "Inter",
-              fontSize: "16px",
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight: "24px",
-            }}
-          >
-            SUN CO.
-          </p>
+        <div style={innerStyle.left}>
+          <Image src={logo} width={24} height={24} alt="logo" />
+          <p style={innerStyle.header}>SUN CO.</p>
         </div>
       </Link>
       {/* right */}
       {cartList.length > 0 ? (
         <Link href={{ pathname: "/cart" }}>
           <button style={innerStyle.button}>
-            <span style={{ display: "flex", alignItems: "center" }}>
-              <Image src={cartIcon} width={24} height={24} alt="Cart Icon" />
-              <p style={{ color: "black", marginLeft: 9 }}>View Cart</p>
+            <span style={innerStyle.span}>
+              <Image src={cartIcon} width={24} height={24} alt="cart" />
+              <p style={innerStyle.p}>View Cart</p>
             </span>
             <div style={innerStyle.badge}>{cartList.length}</div>
           </button>
         </Link>
       ) : (
+        // if cart is empty, do not navigate
         <button
           style={innerStyle.button}
           onClick={() => {
             alert("Cart is empty");
           }}
         >
-          <span style={{ display: "flex", alignItems: "center" }}>
-            <Image src={cartIcon} width={24} height={24} alt="Cart Icon" />
-            <p style={{ color: "black", marginLeft: 9 }}>View Cart</p>
+          <span style={innerStyle.span}>
+            <Image src={cartIcon} width={24} height={24} alt="cart" />
+            <p style={innerStyle.p}>View Cart</p>
           </span>
         </button>
       )}
@@ -89,6 +71,28 @@ const innerStyle = {
     borderRadius: "50%",
     width: 24,
     height: 24,
+    marginLeft: 9,
+  },
+  header: {
+    color: "black",
+    marginLeft: 9,
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 600,
+    lineHeight: "24px",
+  },
+  left: {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "18px",
+  },
+  span: {
+    display: "flex",
+    alignItems: "center",
+  },
+  p: {
+    color: "black",
     marginLeft: 9,
   },
 };

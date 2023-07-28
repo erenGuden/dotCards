@@ -1,4 +1,3 @@
-// pages/Page.tsx
 "use client";
 
 import React, { useEffect } from "react";
@@ -42,6 +41,7 @@ export default function Page() {
 
   return (
     <main className={styles.main}>
+      {/* Cart Left Side */}
       <div className={styles.productInfo} style={{ flexDirection: "column" }}>
         <div
           style={{
@@ -49,8 +49,6 @@ export default function Page() {
             flexDirection: "row",
           }}
         >
-          {/* Top left: Product Image */}
-
           <div
             style={{
               display: "flex",
@@ -67,6 +65,7 @@ export default function Page() {
             >
               Your Bag
             </h4>
+            {/* Display items that are added to cart */}
             {cartList.map((item: IProduct) => (
               <CartItems
                 key={item.id}
@@ -82,6 +81,7 @@ export default function Page() {
               display: "flex",
             }}
           >
+            {/* Cart Right Side */}
             <Summary />
           </div>
         </div>

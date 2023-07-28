@@ -12,7 +12,6 @@ const Content: FC<Props> = (props: Props) => {
     <div className={styles.center}>
       {/* Banner */}
       <Banner />
-
       {/* ProductList */}
       <ProductList />
     </div>

@@ -17,46 +17,43 @@ const Footer: FC<Props> = (props: Props) => {
 
   return (
     <div className={styles.footer}>
-      {/* left  */}
+      {/* Left  */}
       <Link href={{ pathname: "/" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            alignContent: "space-between",
-            textAlign: "center",
-            gap: "20px",
-            paddingLeft: "34px",
-          }}
-        >
+        <div style={innerStyle.logo}>
           <Image src={logo} width={24} height={24} alt="Sun Co. Logo" />
-          <p
-            style={{
-              fontFamily: "Inter",
-              fontSize: "16px",
-              fontStyle: "normal",
-              fontWeight: 600,
-              color: "white",
-              lineHeight: "24px",
-            }}
-          >
-            SUN CO.
-          </p>
+          <p style={innerStyle.name}>SUN CO.</p>
         </div>
       </Link>
+      {/* Middle */}
       <div className={styles.footerMiddle}>
         <p>© 2023 dot.cards text task. All rights reserved</p>
       </div>
+      {/* Right */}
       <div className={styles.social}>
         <Image src={Instagram} alt="instagram" />
         <Image src={Twitter} alt="twitter" />
         <Image src={Youtube} alt="youtube" />
       </div>
-      {/* right */}
     </div>
   );
 };
 
+const innerStyle = {
+  logo: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    alignContent: "space-between",
+    gap: "20px",
+    paddingLeft: "34px",
+  },
+  name: {
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 600,
+    color: "white",
+    lineHeight: "24px",
+  },
+};
 export default Footer;

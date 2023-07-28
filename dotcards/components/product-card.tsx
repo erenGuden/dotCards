@@ -27,7 +27,7 @@ const ProductCard: FC<Props> = (props: Props) => {
 
         {/* Title */}
         <h2>{item.name}</h2>
-        {/* Description */}
+        {/* Subtitle */}
         <p>{item.subtitle}</p>
         {/* Price */}
         <span>${item.priceSale}</span>

@@ -1,13 +1,11 @@
 "use client";
 import React, { FC } from "react";
 import Image from "next/image";
-import { addBasket } from "@/utils/redux/commonSlice";
-import { IProduct } from "@/models/dto/product.dto";
 import images from "../assets/images/index";
 
 interface Props {
+  // catch probs to use in this component
   quantity?: number;
-
   handleAmountIncrement: () => void;
   handleAmountDecrement: () => void;
 }

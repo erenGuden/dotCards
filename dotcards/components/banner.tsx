@@ -21,14 +21,14 @@ const Carousel: FC<Props> = (props: Props) => {
       }}
     >
       <Image src={Banner} alt="Banner" width={1150} />
-      {/* Shop Now Button */}
 
+      {/* Shop Now Button */}
       <button
         style={{
           position: "absolute",
-          left: "190px", // Adjust the horizontal position of the button
-          bottom: "4px", // Adjust the vertical position of the button
-          transform: "translate(-50%, -50%)", // Center the button on the image
+          left: "190px",
+          bottom: "4px",
+          transform: "translate(-50%, -50%)",
           backgroundColor: "black",
           padding: "20px 80px",
           borderRadius: "8px",
