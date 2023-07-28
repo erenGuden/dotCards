@@ -1,0 +1,78 @@
+import React, { FC } from "react";
+import styles from ".././app/page.module.css";
+import QuantityButton from "./quantityButton";
+import Remove from "./removeButton";
+import { IProduct } from "@/models/dto/product.dto";
+import Image from "next/image";
+
+interface Props {
+  product: IProduct;
+  lastItem?: boolean;
+
+  handleAmountIncrement: (product: IProduct) => void;
+  handleAmountDecrement: (product: IProduct) => void;
+}
+
+const CartItems: FC<Props> = (props: Props) => {
+  const { product, lastItem, handleAmountIncrement, handleAmountDecrement } =
+    props;
+  return (
+    <main
+      style={{
+        borderBottom: !lastItem ? "1px solid #E5E5E5" : "none",
+      }}
+    >
+      {/* Product Card */}
+      <div className={styles.cartContainer}>
+        {/* Item */}
+        <div className={styles.cartItems}>
+          {/* Product Left Side  */}
+
+          <div className={styles.itemImage}>
+            <Image
+              src={product.cover}
+              alt="Banner"
+              width={170}
+              height={170}
+              style={{
+                borderRadius: 19,
+              }}
+            />
+          </div>
+
+          {/* Product Right Side  */}
+          <div className={styles.itemDetails}>
+            <div className={styles.itemTopDetails}>
+              <div className={styles.itemTopLeftDetails}>
+                <span>{product?.name}</span>
+                <span style={{ color: "darkgray", paddingTop: 6 }}>
+                  {product?.description}
+                </span>
+              </div>
+              <div className={styles.itemTopRightDetails}>
+                <span>${product?.priceSale}</span>
+              </div>
+            </div>
+            <div
+              className={styles.itemBottomDetails}
+              style={{ paddingTop: "7%", paddingLeft: 32 }}
+            >
+              <QuantityButton
+                quantity={product?.quantity}
+                handleAmountIncrement={() => {
+                  handleAmountDecrement(product);
+                }}
+                handleAmountDecrement={() => {
+                  handleAmountIncrement(product);
+                }}
+              />
+              <Remove />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default CartItems;
