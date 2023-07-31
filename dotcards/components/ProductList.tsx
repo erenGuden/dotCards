@@ -11,24 +11,7 @@ const ProductList: FC<Props> = (props: Props) => {
 
   return (
     <div>
-      {" "}
-      <span
-        style={{
-          fontSize: "36px",
-          fontWeight: 700,
-          color: "black",
-          lineHeight: "48px",
-          fontFamily: "DM Sans",
-          letterSpacing: "-1px",
-          width: "394px",
-          height: "48px",
-          display: "block",
-          marginTop: "24px",
-          marginBottom: "10p",
-        }}
-      >
-        Explore our latest drops
-      </span>
+      <span style={innerStyle.header}>Explore our latest drops</span>
       <div className={styles.grid}>
         {productList.map((val: IProduct, index: number) => {
           return <ProductCard item={val} key={index} />;
@@ -38,4 +21,19 @@ const ProductList: FC<Props> = (props: Props) => {
   );
 };
 
+const innerStyle = {
+  header: {
+    fontSize: "36px",
+    fontWeight: 700,
+    color: "black",
+    lineHeight: "48px",
+    fontFamily: "DM Sans",
+    letterSpacing: "-1px",
+    width: "394px",
+    height: "48px",
+    display: "block",
+    marginTop: "24px",
+    marginBottom: "32px",
+  },
+};
 export default ProductList;
