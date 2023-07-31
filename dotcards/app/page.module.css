@@ -7,7 +7,6 @@
   min-height: 100vh;
   width: 100%;
   max-width: 1440px;
-  padding: 12px 138px;
 }
 
 .header {
@@ -47,6 +46,15 @@
   width: 142px;
   height: 40px;
   border-radius: 8px;
+}
+
+.banner {
+  background-color: black;
+  width: 1116px;
+  height: 427px;
+  position: relative;
+  margin-top: 0px;
+  /* marginBottom: "112px", */
 }
 
 .productInfo {
@@ -191,7 +199,6 @@
 
 .footerMiddle {
   color: #d9dbe1;
-  font-feature-settings: "liga" off;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -203,7 +210,7 @@
 .social {
   display: flex;
   gap: 16px;
-  padding-right: 30px;
+  padding-right: 0px;
   height: 24px;
   cursor: pointer;
 }
@@ -387,15 +394,47 @@
   display: inherit;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 2rem 0;
-  flex-direction: column;
+.desktopOnly {
+  display: block;
 }
 
+.mobileOnly {
+  display: none;
+}
+
+.center {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  margin-top: 31px;
+  margin-bottom: 112px;
+  /* padding-left: 162px;
+  padding-right: 162px; */
+  width: 1116px;
+  /* background-color: pink; */
+  height: 916px;
+}
+
+.bannerButton {
+  position: absolute;
+  left: 64px;
+  bottom: 64px;
+  transform: translate(-50% -50%);
+  background-color: black;
+  padding: 20px 80px;
+  border-radius: 8px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  width: 290px;
+  height: 64px;
+  gap: 10px;
+}
+
+/* 
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
@@ -409,7 +448,7 @@
   width: 240px;
   height: 180px;
   z-index: -1;
-}
+} */
 
 .center::before,
 .center::after {
@@ -440,6 +479,8 @@
   }
 }
 
+/* Responsive */
+
 /* Mobile */
 @media (max-width: 768px) {
   .main {
@@ -453,33 +494,96 @@
     width: 100%;
     max-width: 390px;
     padding: 12px 138px;
+    /* background-color: yellow; */
   }
 
   .header {
     padding: 20px 14px;
   }
 
+  .footer {
+    width: 390px;
+    height: 128px;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .footerMiddle {
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 30px;
+  }
+
+  .social {
+    margin-top: 10px;
+    padding-left: 30px;
+  }
+
+  .center {
+    margin-top: 20px;
+    /* margin-bottom: 128px; */
+    /* padding-left: 162px;
+    padding-right: 162px; */
+    width: 350px;
+    height: 864px;
+    /* background-color: pink; */
+  }
+
+  .banner {
+    background-color: black;
+    position: relative;
+    width: 350px;
+    height: 449px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  .desktopOnly {
+    visibility: hidden;
+  }
+
+  .mobileOnly {
+    display: block;
+  }
+
   .content {
     padding: 4rem;
   }
 
+  .bannerButton {
+    left: 24px;
+    bottom: 40px;
+    padding: 12px 80px;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    width: 302px;
+    height: 44px;
+  }
+
+  .div span {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1px;
+  }
+
   .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+    grid-template-columns: repeat(0, 1fr);
+    display: wrap;
+    flex-wrap: nowrap;
+    gap: 220px;
+    overflow-y: auto;
   }
 
   .card {
-    padding: 1rem 2.5rem;
+    width: 195.75px;
+    height: 0%;
   }
 
   .card h2 {
     margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
   }
 
   .center::before {

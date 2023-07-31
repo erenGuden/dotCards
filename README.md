@@ -62,9 +62,11 @@ While working on this project for the interview challenge, there are a couple of
 
 -Device-Specific Design: The current webpage design has been crafted for optimal viewing on Macbook 13".
 
--Responsive Design: As a developer, I understand the significance of a seamless user experience on various devices. Although I've been recently using libraries for similar tasks, I embraced this challenge, allowing me to explore new techniques and expand my skillset. This experience has motivated me to continue seeking growth and pushing my boundaries in future opportunities.
+-Responsive Design: As a developer, I understand the significance of a seamless user experience on various devices. Although I've been recently using libraries for similar tasks, I embraced this challenge, allowing me to explore new techniques and expand my skillset. This experience has motivated me to continue seeking growth and pushing my boundaries in future opportunities. UPDATE: Landing page has been optimized for responsive design. 
 
 -Carousel Implementation: For the carousel feature in this project, I utilized the "react-carousel-minimal" library (version 1.4.1). While the current implementation serves the purpose, I aim to explore further carousel options and potentially develop a custom carousel component to better align with the upcoming projects' specific requirements.
+
+- Font types: In Figma Designs, font types of the properties do not match with the their apperance in the frameworks. Therefore, in my project, these may differ slightly. 
 
 If required, I'll keep working on this project to meet the exact requirements provided.
 

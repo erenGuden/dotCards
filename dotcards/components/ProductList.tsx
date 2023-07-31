@@ -11,6 +11,7 @@ const ProductList: FC<Props> = (props: Props) => {
 
   return (
     <div>
+      {" "}
       <span
         style={{
           fontSize: "36px",
@@ -21,6 +22,9 @@ const ProductList: FC<Props> = (props: Props) => {
           letterSpacing: "-1px",
           width: "394px",
           height: "48px",
+          display: "block",
+          marginTop: "24px",
+          marginBottom: "10p",
         }}
       >
         Explore our latest drops
