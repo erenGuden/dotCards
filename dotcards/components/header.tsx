@@ -18,13 +18,14 @@ const Header: FC<Props> = (props: Props) => {
       <Link href={{ pathname: "/" }}>
         <div style={innerStyle.left}>
           <Image src={logo} width={24} height={24} alt="logo" />
-          <p style={innerStyle.header}>SUN CO.</p>
+          <p className={styles.headerLogo}>SUN CO.</p>
         </div>
       </Link>
       {/* right */}
       {cartList.length > 0 ? (
         <Link href={{ pathname: "/cart" }}>
-          <button style={innerStyle.button}>
+          {/* <button style={innerStyle.button}> */}
+          <button className={styles.headerButton}>
             <span style={innerStyle.span}>
               <Image src={cartIcon} width={24} height={24} alt="cart" />
               <p style={innerStyle.p}>View Cart</p>
@@ -35,7 +36,7 @@ const Header: FC<Props> = (props: Props) => {
       ) : (
         // if cart is empty, do not navigate
         <button
-          style={innerStyle.button}
+          className={styles.headerButton}
           onClick={() => {
             alert("Cart is empty");
           }}
@@ -51,18 +52,6 @@ const Header: FC<Props> = (props: Props) => {
 };
 
 const innerStyle = {
-  button: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "white",
-    color: "black",
-    border: "1px solid black",
-    cursor: "pointer",
-    width: 142,
-    height: 40,
-    borderRadius: 8,
-  },
   badge: {
     display: "flex",
     alignItems: "center",
@@ -73,19 +62,9 @@ const innerStyle = {
     height: 24,
     marginLeft: 9,
   },
-  header: {
-    color: "black",
-    marginLeft: 9,
-    fontFamily: "Inter",
-    fontSize: "16px",
-    fontStyle: "normal",
-    fontWeight: 600,
-    lineHeight: "24px",
-  },
   left: {
     display: "flex",
     alignItems: "center",
-    marginLeft: "18px",
   },
   span: {
     display: "flex",
