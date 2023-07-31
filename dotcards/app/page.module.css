@@ -49,7 +49,7 @@
 }
 
 .banner {
-  background-color: black;
+  /* background-color: black; */
   width: 1116px;
   height: 427px;
   position: relative;
@@ -522,16 +522,14 @@
 
   .center {
     margin-top: 20px;
-    /* margin-bottom: 128px; */
-    /* padding-left: 162px;
-    padding-right: 162px; */
+
     width: 350px;
     height: 864px;
     /* background-color: pink; */
   }
 
   .banner {
-    background-color: black;
+    /* background-color: black; */
     position: relative;
     width: 350px;
     height: 449px;

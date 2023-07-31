@@ -62,7 +62,7 @@ While working on this project for the interview challenge, there are a couple of
 
 -Device-Specific Design: The current webpage design has been crafted for optimal viewing on Macbook 13".
 
--Responsive Design: As a developer, I understand the significance of a seamless user experience on various devices. Although I've been recently using libraries for similar tasks, I embraced this challenge, allowing me to explore new techniques and expand my skillset. This experience has motivated me to continue seeking growth and pushing my boundaries in future opportunities. UPDATE: Landing page has been optimized for responsive design. 
+-Responsive Design: As a developer, I understand the significance of a seamless user experience on various devices. Although I've been recently using libraries for similar tasks, I embraced this challenge, allowing me to explore new techniques and expand my skillset. This experience has motivated me to continue pushing my boundaries in future opportunities. As of now, only home page of the project has been optimized for responsive design. 
 
 -Carousel Implementation: For the carousel feature in this project, I utilized the "react-carousel-minimal" library (version 1.4.1). While the current implementation serves the purpose, I aim to explore further carousel options and potentially develop a custom carousel component to better align with the upcoming projects' specific requirements.
 
