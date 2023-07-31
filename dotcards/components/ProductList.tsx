@@ -5,9 +5,11 @@ import styles from "../app/page.module.css";
 import ProductCard from "./product-card";
 
 interface Props {}
+const isMobile = window.innerWidth <= 768;
 
 const ProductList: FC<Props> = (props: Props) => {
   const {} = props;
+  console.log(isMobile);
 
   return (
     <div>
@@ -23,10 +25,10 @@ const ProductList: FC<Props> = (props: Props) => {
 
 const innerStyle = {
   header: {
-    fontSize: "36px",
+    fontSize: isMobile ? "28px" : "36px",
     fontWeight: 700,
     color: "black",
-    lineHeight: "48px",
+    lineHeight: isMobile ? "36px" : "48px",
     fontFamily: "DM Sans",
     letterSpacing: "-1px",
     width: "394px",
