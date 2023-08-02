@@ -147,6 +147,7 @@ const innerStyle = {
     fontFamily: "DM Sans",
     fontSize: isMobile ? "16.5px" : "18px",
     fontStyle: "normal",
+    color: "black",
     fontWeight: isMobile ? 700 : 700,
     lineHeight: isMobile ? "15px" : "20px",
     letterSpacing: isMobile ? "-0.375px" : "-0.5px",

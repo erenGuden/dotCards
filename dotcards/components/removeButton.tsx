@@ -25,7 +25,6 @@ const innerStyle = {
     border: "none",
     marginLeft: 30,
     fontWeight: 700,
-    paddingTop: 14,
     lineHeight: "24px",
   },
 };

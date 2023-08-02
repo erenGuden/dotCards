@@ -6,6 +6,15 @@ import {
   image5,
   image6,
   image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
 } from "../assets/images/dummy";
 import { IProduct } from "../models/dto/product.dto";
 
@@ -33,8 +42,8 @@ export const productList: IProduct[] = [
   {
     id: "2",
     cover: image2.src,
-    images: [image1.src, image6.src, image7.src],
-    imageDetail: image5.src,
+    images: [image2.src, image8.src, image9.src],
+    imageDetail: image10.src,
     name: "Nike",
     price: 200,
     subtitle: "Nike Gamma Force",
@@ -53,8 +62,8 @@ export const productList: IProduct[] = [
   {
     id: "3",
     cover: image3.src,
-    images: [image1.src, image6.src, image7.src],
-    imageDetail: image5.src,
+    images: [image3.src, image11.src, image12.src],
+    imageDetail: image13.src,
     name: "Nike",
     price: 160,
     subtitle: "Cosmic Unity 3",
@@ -73,8 +82,8 @@ export const productList: IProduct[] = [
   {
     id: "4",
     cover: image4.src,
-    images: [image1.src, image6.src, image7.src],
-    imageDetail: image5.src,
+    images: [image4.src, image15.src, image16.src],
+    imageDetail: image14.src,
     name: "adidas",
     price: 98.99,
     subtitle: "DAILY 3.0 SHOES",

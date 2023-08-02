@@ -9,6 +9,8 @@ import { IProduct } from "@/models/dto/product.dto";
 import { addBasket } from "@/utils/redux/commonSlice";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 
+const isMobile = window.innerWidth <= 768;
+
 export default function Page() {
   const dispatch = useAppDispatch();
   const { cartList } = useAppSelector((state) => state.commonSlice);
@@ -52,55 +54,45 @@ export default function Page() {
   return (
     <main className={styles.main}>
       {/* Cart Left Side */}
-      <div className={styles.productInfo} style={{ flexDirection: "column" }}>
+      <div className={styles.cartPageWrapper}>
+        <div className={styles.cartPageLeft}>
+          {/* Display items that are added to cart */}
+          <h4 style={innerStyle.h4}>Your Bag</h4>
+          {cartList.map((item: IProduct) => (
+            <CartItems
+              key={item.id}
+              product={item}
+              handleAmountIncrement={(product: IProduct) =>
+                handleAmountIncrement(product)
+              }
+              handleAmountDecrement={(product: IProduct) =>
+                handleAmountDecrement(product)
+              }
+              handleRemove={(product: IProduct) => handleRemove(product)}
+            />
+          ))}
+        </div>
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
+            alignItems: "center",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <h4
-              style={{
-                color: "black",
-                fontSize: "26px",
-                letterSpacing: "-1px",
-                marginTop: "5%",
-              }}
-            >
-              Your Bag
-            </h4>
-            {/* Display items that are added to cart */}
-            {cartList.map((item: IProduct) => (
-              <CartItems
-                key={item.id}
-                product={item}
-                handleAmountIncrement={(product: IProduct) =>
-                  handleAmountIncrement(product)
-                }
-                handleAmountDecrement={(product: IProduct) =>
-                  handleAmountDecrement(product)
-                }
-                handleRemove={(product: IProduct) => handleRemove(product)}
-              />
-            ))}
-          </div>
-          <div style={{ width: "100px" }} />
-          <div
-            style={{
-              display: "flex",
-            }}
-          >
-            {/* Cart Right Side */}
-            <Summary />
-          </div>
+          {/* Cart Right Side */}
+          <Summary />
         </div>
       </div>
     </main>
   );
 }
+
+// Inner Styling
+const innerStyle = {
+  h4: {
+    color: "black",
+    fontSize: isMobile ? "28px" : "36px",
+    letterSpacing: "-1px",
+    lineHeight: isMobile ? "36px" : "48px",
+    fontFamily: "DM Sans",
+  },
+};

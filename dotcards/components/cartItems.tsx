@@ -68,10 +68,7 @@ const CartItems: FC<Props> = (props: Props) => {
                 <span>${product?.priceSale}</span>
               </div>
             </div>
-            <div
-              className={styles.itemBottomDetails}
-              style={{ paddingTop: "7%", paddingLeft: 2 }}
-            >
+            <div className={styles.itemBottomDetails}>
               <QuantityButton
                 quantity={product?.quantity}
                 handleAmountIncrement={() => {
