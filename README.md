@@ -19,6 +19,7 @@ npm run dev
 
 ## Folder Structure
 
+In this project, I have adopted the camel naming convention for the folder structure.
 The project's folder structure is organized as follows:
 📦 dotcards
 ├─ dotcards
@@ -54,6 +55,8 @@ The project's folder structure is organized as follows:
 ├─ commonSlice.ts: A Redux slice responsible for managing common state.
 ├─ hooks.tsx: Custom hooks related to Redux.
 └─ store.tsx: The Redux store configuration.
+
+Project 
 
 ## Notable Considerations
 
