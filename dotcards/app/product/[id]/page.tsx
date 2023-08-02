@@ -150,6 +150,7 @@ const innerStyle = {
     fontWeight: isMobile ? 700 : 700,
     lineHeight: isMobile ? "15px" : "20px",
     letterSpacing: isMobile ? "-0.375px" : "-0.5px",
+    color: "black",
   },
   p: {
     fontFamily: "Inter",

@@ -44,6 +44,7 @@ const innerStyle = {
     justifyContent: "space-between",
     borderRadius: isMobile ? "7.5px" : "10px",
     border: "1px solid #E9EBEE",
+    color: "black",
     boxShadow:
       "0px 4.444444179534912px 66.66666412353516px 0px rgba(0, 0, 0, 0.08)",
   },
