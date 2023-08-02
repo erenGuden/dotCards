@@ -6,6 +6,8 @@ interface Props {
   onClick: () => void;
 }
 
+const isMobile = window.innerWidth <= 768;
+
 const addToCart: FC<Props> = (props: Props) => {
   const { onClick } = props;
 
@@ -19,12 +21,18 @@ const addToCart: FC<Props> = (props: Props) => {
 const styles = {
   button: {
     backgroundColor: "black",
-    width: "80%",
-    height: "60px",
+    width: "100%",
+    height: isMobile ? "48px" : "60px",
     borderRadius: "10px",
-    margin: "36px ",
+    marginTop: isMobile ? "25px" : "56px ",
     fontWeight: 700,
-    fontSize: "18px",
+    fontSize: isMobile ? "16px" : "18px",
+    lineHeight: "20px",
+    fontFamily: "Inter",
+    // gap: "1000px",
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
   },
 };
 

@@ -2,14 +2,13 @@ import { productList } from "@/utils/data";
 import { IProduct } from "@/models/dto/product.dto";
 import React, { FC } from "react";
 import styles from "../app/page.module.css";
-import ProductCard from "./product-card";
+import ProductCard from "./productCard";
 
 interface Props {}
 const isMobile = window.innerWidth <= 768;
 
 const ProductList: FC<Props> = (props: Props) => {
   const {} = props;
-  console.log(isMobile);
 
   return (
     <div>

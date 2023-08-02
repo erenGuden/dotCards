@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styles from "../app/page.module.css";
 import Banner from "./display";
-import ProductList from "./ProductList";
+import ProductList from "./productList";
 
 interface Props {}
 
