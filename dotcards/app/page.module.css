@@ -7,7 +7,7 @@
   min-height: 90vh;
   width: 100%;
 }
-
+/* Header */
 .header {
   display: flex;
   flex-direction: row;
@@ -55,6 +55,8 @@
   margin-top: 0px;
   /* marginBottom: "112px", */
 }
+
+/* Product Details Page */
 
 .productInfoTop {
   display: flex;
@@ -114,60 +116,6 @@
   margin: 32px 36px 36px 36px;
 }
 
-.headerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 528px;
-  height: 443px;
-  color: black;
-  box-shadow: 0px 4.444444179534912px 66.66666412353516px 0px
-    rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-  margin-top: 45px;
-}
-
-.headerContainerTop {
-  border-bottom: 1px solid #e9ebee;
-  background-color: transparent;
-  padding: 36px;
-  display: flex;
-  flex-direction: column;
-}
-
-.headerContainerBottom {
-  padding: 36px 0px;
-  font-size: 24px;
-  border-bottom: 1px solid #e9ebee;
-  margin-left: 36px;
-}
-
-.headerContainer span {
-  display: inline-block;
-  transition: transform 200ms;
-  color: black;
-  margin-top: 18px;
-}
-
-.headerContainer h2 {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: black;
-}
-
-.headerContainer p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  color: black;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: inherit;
-}
-
 .productInfoDescription {
   margin-top: 40px;
 
@@ -185,6 +133,8 @@
   display: flex;
   border-radius: 20px;
 }
+
+/* Cart */
 .summaryContainer {
   display: flex;
   flex-direction: column;
@@ -208,18 +158,26 @@
   margin: 10px;
 }
 
+/* Footer */
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 138px;
+  padding: 24px 162px;
   position: sticky;
   width: 100%;
   height: 72px;
-  background: black;
+  background: 201B21;
   z-index: 10;
   flex-shrink: 0;
+}
+
+.footerLeft {
+  width: 66.66%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .footerMiddle {
@@ -439,10 +397,7 @@
   flex-direction: column;
   margin-top: 31px;
   margin-bottom: 112px;
-  /* padding-left: 162px;
-  padding-right: 162px; */
   width: 1116px;
-  /* background-color: pink; */
   height: 916px;
 }
 
@@ -534,20 +489,24 @@
   .footer {
     width: 390px;
     height: 128px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 12px;
+    padding: 24px 20px;
+  }
+  .footerLeft {
+    display: flow-root;
   }
 
   .footerMiddle {
     margin-top: 10px;
-    text-align: center;
-    padding-left: 30px;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    padding-left: 0px;
   }
 
   .social {
-    margin-top: 10px;
-    padding-left: 30px;
+    height: 100%;
   }
 
   .center {

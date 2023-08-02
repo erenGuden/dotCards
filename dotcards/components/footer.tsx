@@ -11,6 +11,7 @@ import { useAppSelector } from "@/utils/redux/hooks";
 import { style } from "@mui/system";
 
 interface Props {}
+const isMobile = window.innerWidth <= 768;
 
 const Footer: FC<Props> = (props: Props) => {
   const {} = props;
@@ -18,15 +19,20 @@ const Footer: FC<Props> = (props: Props) => {
   return (
     <div className={styles.footer}>
       {/* Left  */}
-      <Link href={{ pathname: "/" }}>
-        <div style={innerStyle.logo}>
-          <Image src={logo} width={24} height={24} alt="Sun Co. Logo" />
-          <p style={innerStyle.name}>SUN CO.</p>
+      <div className={styles.footerLeft}>
+        <Link href={{ pathname: "/" }}>
+          <div style={innerStyle.logo}>
+            <Image src={logo} width={24} height={24} alt="Sun Co. Logo" />
+            <p style={innerStyle.name}>SUN CO.</p>
+          </div>
+        </Link>
+        {/* Middle */}
+        <div className={styles.footerMiddle}>
+          <p>
+            © 2023 dot.cards text task.
+            {isMobile ? <br /> : ""} All rights reserved
+          </p>
         </div>
-      </Link>
-      {/* Middle */}
-      <div className={styles.footerMiddle}>
-        <p>© 2023 dot.cards text task. All rights reserved</p>
       </div>
       {/* Right */}
       <div className={styles.social}>
@@ -42,10 +48,7 @@ const innerStyle = {
   logo: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
-    alignContent: "space-between",
-    gap: "20px",
-    paddingLeft: "34px",
+    gap: isMobile ? "9px" : "20px",
   },
   name: {
     fontFamily: "Inter",
