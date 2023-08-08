@@ -15,6 +15,10 @@ import {
   image14,
   image15,
   image16,
+  image1mobil,
+  image2mobil,
+  image3mobil,
+  image4mobil,
 } from "../assets/images/dummy";
 import { IProduct } from "../models/dto/product.dto";
 
@@ -24,6 +28,7 @@ export const productList: IProduct[] = [
     cover: image1.src,
     images: [image1.src, image6.src, image7.src],
     imageDetail: image5.src,
+    imageMobil: image1mobil.src,
     name: "Off-White",
     price: 775,
     subtitle: 'Out Of Office "Ooo"sneakers',
@@ -44,6 +49,8 @@ export const productList: IProduct[] = [
     cover: image2.src,
     images: [image2.src, image8.src, image9.src],
     imageDetail: image10.src,
+    imageMobil: image2mobil.src,
+
     name: "Nike",
     price: 200,
     subtitle: "Nike Gamma Force",
@@ -64,6 +71,7 @@ export const productList: IProduct[] = [
     cover: image3.src,
     images: [image3.src, image11.src, image12.src],
     imageDetail: image13.src,
+    imageMobil: image3mobil.src,
     name: "Nike",
     price: 160,
     subtitle: "Cosmic Unity 3",
@@ -84,6 +92,7 @@ export const productList: IProduct[] = [
     cover: image4.src,
     images: [image4.src, image15.src, image16.src],
     imageDetail: image14.src,
+    imageMobil: image4mobil.src,
     name: "adidas",
     price: 98.99,
     subtitle: "DAILY 3.0 SHOES",

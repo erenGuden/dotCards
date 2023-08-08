@@ -3,6 +3,7 @@ export interface IProduct extends IProductQuantity {
   cover: string;
   images: string[];
   imageDetail: string;
+  imageMobil: string;
   name: string;
   price: number;
   subtitle: string;

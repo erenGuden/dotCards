@@ -14,6 +14,8 @@ interface Props {
   handleRemove: (product: IProduct) => void;
 }
 
+const isMobile = window.innerWidth <= 768;
+
 const CartItems: FC<Props> = (props: Props) => {
   const {
     product,
@@ -36,10 +38,10 @@ const CartItems: FC<Props> = (props: Props) => {
 
           <div className={styles.itemImage}>
             <Image
-              src={product.cover}
+              src={isMobile ? product.imageMobil : product.cover}
               alt="Banner"
-              width={170}
-              height={170}
+              width={isMobile ? 140 : 170}
+              height={isMobile ? 141 : 170}
               style={{
                 borderRadius: 19,
               }}

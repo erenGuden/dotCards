@@ -14,3 +14,7 @@ export { default as image13 } from "./image13.png";
 export { default as image14 } from "./image14.png";
 export { default as image15 } from "./image15.png";
 export { default as image16 } from "./image16.png";
+export { default as image1mobil } from "./image1mobil.png";
+export { default as image2mobil } from "./image2mobil.png";
+export { default as image3mobil } from "./image3mobil.png";
+export { default as image4mobil } from "./image4mobil.png";
